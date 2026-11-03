@@ -1,0 +1,44 @@
+@use 'variables' as *;
+
+// 1. Khai báo Mixins
+@mixin flex-center($direction: row) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+@mixin card-style() {
+    background: white;
+    border-radius: $radius;
+    box-shadow: $shadow;
+    padding: $spacing * 3; // 8px * 3 = 24px
+}
+
+// 2. Áp dụng vào .card
+.card {
+    @include card-style();
+    flex: 1;
+    min-width: 250px;
+}
+
+// 3. Áp dụng mixin flex-center vào .navbar
+.navbar {
+    @include flex-center();
+    justify-content: space-between; // Ghi đè để đẩy 2 bên
+    padding: $spacing * 2 $spacing * 4; // 16px 32px
+    background-color: $color-primary;
+    
+    .logo {
+        color: white;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    
+    .nav-links a {
+        color: #93c5fd;
+        margin-left: $spacing * 3;
+        font-weight: 500;
+        &:hover { color: white; } // Nested CSS
+    }
+}

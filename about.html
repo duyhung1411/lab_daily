@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tiêu đề trang theo đúng yêu cầu: Tên – Giới thiệu -->
+    <title>Đoàn Duy Hưng – Giới thiệu</title>
+
+    <!-- Nhúng Google Font 'Inter' vào trước file style.css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">My Website</div>
+            <nav class="nav-links">
+                <a href="index.html">Trang chủ</a>
+                <a href="about.html">Giới thiệu</a>
+                <a href="contact.html">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <div class="page-layout">
+        <!-- Thêm Sidebar vào đây -->
+        <aside class="sidebar">
+            <h3>Liên kết nhanh</h3>
+            <ul>
+                <li><a href="#gioi-thieu">Về tôi</a></li>
+                <li><a href="#ky-nang">Kỹ năng</a></li>
+                <li><a href="#mon-hoc">Môn học</a></li>
+            </ul>
+        </aside>
+
+        <!-- 3. Main chứa các phần bài tập yêu cầu -->
+        <main>
+            <!-- Mục 8 & 15: Section Về tôi (chứa ảnh semantic, 2 đoạn văn và dl giải thích) -->
+            <section>
+                <h2>Về tôi</h2>
+                <figure>
+                    <img src="https://via.placeholder.com/150" alt="Ảnh đại diện của Đoàn Duy Hưng">
+                    <figcaption>Ảnh đại diện</figcaption>
+                </figure>
+                <p>Xin chào! Tôi hiện là sinh viên chuyên ngành Công nghệ thông tin.</p>
+                <p class="highlight">Tôi thích học hỏi về lập trình web, thiết kế giao diện và xu hướng công nghệ mới.</p>
+                
+                <h3>Thuật ngữ chuyên ngành</h3>
+                <dl>
+                    <dt>HTML5</dt>
+                    <dd>Ngôn ngữ đánh dấu siêu văn bản định hình cấu trúc web.</dd>
+                    <dt>CSS3</dt>
+                    <dd>Ngôn ngữ định kiểu giúp trang trí giao diện website.</dd>
+                    <dt>Git</dt>
+                    <dd>Hệ thống quản lý phiên bản mã nguồn.</dd>
+                </dl>
+            </section>
+
+            <!-- Mục 9: Section Kỹ năng (dùng ul) -->
+                    <section id="ky-nang">
+            <h2>Kỹ năng</h2>
+            <div class="skills-grid">
+                <div class="skill-card">HTML5 / CSS3</div>
+                <div class="skill-card">JavaScript cơ bản</div>
+                <div class="skill-card">Git & GitHub</div>
+                <div class="skill-card">Python</div>
+            </div>
+        </section>
+
+            <!-- Mục 10: Section Lộ trình học tập (dùng ol) -->
+            <section>
+                <h2>Lộ trình học tập</h2>
+                <ol>
+                    <li>Nắm vững cấu trúc Semantic HTML5.</li>
+                    <li>Thành thạo bố cục giao diện với CSS.</li>
+                    <li>Xây dựng website cá nhân hoàn chỉnh.</li>
+                </ol>
+            </section>
+
+            <!-- Mục 11 & 16: Section Môn học (table có thead, tbody, tfoot, colspan, rowspan) -->
+            <section>
+                <h2>Môn học</h2>
+                <table border="1">
+                    <caption>Bảng môn học kỳ này</caption>
+                    <thead>
+                        <tr>
+                            <th>Khối kiến thức</th>
+                            <th>Môn học</th>
+                            <th>Số TC</th>
+                            <th>Điểm mục tiêu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Chuyên ngành</td>
+                            <td>Lập trình Web</td>
+                            <td>3</td>
+                            <td>8.5</td>
+                        </tr>
+                        <tr>
+                            <td>Cơ sở dữ liệu</td>
+                            <td>3</td>
+                            <td>8.0</td>
+                        </tr>
+                        <tr>
+                            <td>Cơ sở</td>
+                            <td>Toán rời rạc</td>
+                            <td>2</td>
+                            <td>7.5</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">Tổng tín chỉ</td>
+                            <td colspan="2">8 TC</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </main>
+    </div>
+        <footer class="footer-flex">
+            <div class="footer-left">
+                <p>&copy; 2026 Đoàn Duy Hưng.</p>
+            </div>
+            <div class="footer-right">
+                <a href="#">Chính sách bảo mật</a> | 
+                <a href="#">Điều khoản</a>
+            </div>
+        </footer>
+</body>
+</html>

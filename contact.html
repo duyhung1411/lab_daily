@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đoàn Duy Hưng – Liên hệ</title>
+    <!-- Font Inter từ Lab 3 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header>
+        <div class="navbar">
+            <div class="logo">My Website</div>
+            <nav class="nav-links">
+                <a href="index.html">Trang chủ</a>
+                <a href="about.html">Giới thiệu</a>
+                <a href="contact.html">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Liên hệ với tôi</h2>
+
+            <form action="#" method="POST">
+                <!-- Fieldset 1: Thông tin cá nhân -->
+                <fieldset>
+                    <legend>Thông tin cá nhân</legend>
+                    
+                    <p>
+                        <label for="fullname">Họ và tên: *</label><br>
+                        <input type="text" id="fullname" name="fullname" placeholder="Nhập họ tên đầy đủ" required minlength="2" maxlength="100">
+                    </p>
+
+                    <p>
+                        <label for="email">Email: *</label><br>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">Số điện thoại:</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="09xx xxx xxx" pattern="[0-9]{10,11}" title="Nhập 10-11 chữ số">
+                    </p>
+
+                    <!-- Mục 23 (Nâng cao): Ngày sinh -->
+                    <p>
+                        <label for="dob">Ngày sinh:</label><br>
+                        <input type="date" id="dob" name="dob">
+                    </p>
+
+                    <!-- Mục 24 (Nâng cao): Datalist trường đại học -->
+                    <p>
+                        <label for="university">Trường đại học:</label><br>
+                        <input list="universities" id="university" name="university" placeholder="Chọn hoặc nhập tên trường">
+                        <datalist id="universities">
+                            <option value="Đại học Bách Khoa">
+                            <option value="Đại học Khoa học Tự nhiên">
+                            <option value="Đại học Công nghệ Thông tin">
+                            <option value="Đại học Sư phạm Kỹ thuật">
+                        </datalist>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- Fieldset 2: Nội dung liên hệ -->
+                <fieldset>
+                    <legend>Nội dung liên hệ</legend>
+
+                    <p>
+                        <label for="subject">Chủ đề:</label><br>
+                        <select id="subject" name="subject">
+                            <option value="">-- Chọn chủ đề --</option>
+                            <option value="support">Hỗ trợ kỹ thuật</option>
+                            <option value="study">Học tập / Trao đổi</option>
+                            <option value="other">Khác</option>
+                        </select>
+                    </p>
+
+                    <fieldset>
+                        <legend>Kênh liên hệ ưu tiên</legend>
+                        <label for="via-email">
+                            <input type="radio" id="via-email" name="contact-via" value="email" checked> Email
+                        </label>
+                        <label for="via-phone">
+                            <input type="radio" id="via-phone" name="contact-via" value="phone"> Điện thoại
+                        </label>
+                        <label for="via-zalo">
+                            <input type="radio" id="via-zalo" name="contact-via" value="zalo"> Zalo
+                        </label>
+                    </fieldset>
+
+                    <p>
+                        <label for="message">Tin nhắn: *</label><br>
+                        <textarea id="message" name="message" rows="5" placeholder="Nhập nội dung tin nhắn..." required minlength="10" maxlength="500"></textarea>
+                    </p>
+
+                    <p>
+                        <label>
+                            <input type="checkbox" name="agree" required> Tôi đồng ý với <a href="#">điều khoản sử dụng</a> *
+                        </label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- 2 button submit và reset -->
+                <button type="submit">Gửi tin nhắn</button>
+                <button type="reset">Xoá và nhập lại</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer-flex">
+        <div class="footer-left">
+            <p>&copy; 2026 Đoàn Duy Hưng.</p>
+        </div>
+        <div class="footer-right">
+            <a href="#">Chính sách bảo mật</a> | 
+            <a href="#">Điều khoản</a>
+        </div>
+    </footer>
+</body>
+</html>

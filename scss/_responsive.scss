@@ -1,0 +1,28 @@
+@use 'variables' as *;
+
+@media (min-width: 768px) {
+    .page-layout {
+        grid-template-columns: 220px 1fr;
+    }
+    .sidebar {
+        display: block;
+        background: #f1f5f9;
+        padding: 24px;
+        border-radius: 8px;
+        align-self: start;
+        
+        h3 { font-size: 1rem; color: $color-primary; margin-bottom: 12px; }
+        ul { list-style: none; }
+        ul li { margin-bottom: 8px; }
+        ul a { color: $color-secondary; &:hover { text-decoration: underline; } }
+    }
+    .skills-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .page-layout {
+        grid-template-columns: 240px 1fr;
+    }
+}
